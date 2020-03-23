@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/trans"
+    android:layout_height="match_parent"
+    tools:context=".FullScreenActivity">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ImageView
+        android:elevation="@dimen/dimen_2dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/fullscreen_img_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/todo"
+        android:fitsSystemWindows="true"
+         tools:targetApi="lollipop"/>
+</LinearLayout>
+    <com.github.clans.fab.FloatingActionMenu
+        android:padding="15dp"
+        android:id="@+id/activity_fullscreen_photo_fab_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        app:menu_colorPressed="@color/colorPrimary"
+        app:menu_labels_colorNormal="@color/colorAccent">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/fab_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_file_download_24dp"
+            app:fab_colorNormal="#FFE049"
+            app:fab_label="Download"
+            app:fab_size="mini" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/setwallpaper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_image_black_24dp"
+            app:fab_colorNormal="#FFE049"
+            app:fab_label="Set As Wallpaper"
+            app:fab_size="mini" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+</RelativeLayout>
